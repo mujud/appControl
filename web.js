@@ -18,11 +18,8 @@ app.use(logfmt.requestLogger());
 
   app.use(allowCrossDomain);
 
-var obj = new Array;
-obj.push("test1");
-obj.push("test2");
 app.get('/', function(req, res) {
-  res.send({obj});
+  res.send([{'data': "hello"}, {'data': "world"}] );
 });
 
 var port = Number(process.env.PORT || 5000);
