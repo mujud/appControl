@@ -21,8 +21,9 @@ app.use(logfmt.requestLogger());
 var obj = new Array;
 obj.push("test1");
 obj.push("test2");
+var myJsonString = JSON.stringify(obj);
 app.get('/', function(req, res) {
-  res.send({obj});
+  res.send({myJsonString});
 });
 
 var port = Number(process.env.PORT || 5000);
