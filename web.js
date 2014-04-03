@@ -22,7 +22,7 @@ var obj = new Array;
 obj.push("test1");
 obj.push("test2");
 app.get('/', function(req, res) {
-  res.send(obj);
+  res.send({obj});
 });
 
 var port = Number(process.env.PORT || 5000);
